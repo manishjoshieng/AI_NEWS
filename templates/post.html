@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'header.html'%}
+    <body>
+        <!-- Navigation-->
+        {% include 'navbar.html'%}
+        <!-- Page Header-->
+        {% if post.image_url is defined and post.image_url is not none %}
+        <header class="masthead" style="background-image: url('{{post.image_url}}')">
+        {% else %}
+        <header class="masthead" style="background-image: url('../static/assets/img/post-bg.jpg')">
+        {% endif %}
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{post.title}}</h1>
+                            <h2 class="subheading">{{post.description}}</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">AI News</a>
+                                on {{post.pubDate}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        {{post.content}}
+                    </div>
+                    <span class="meta">
+                        <a href="{{post.link}}">Reference</a>
+                    </span>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        {% include 'footer.html'%}
+    </body>
+</html>
