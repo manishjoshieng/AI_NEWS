@@ -1,8 +1,10 @@
 # Business Articles Web Application AI_NEWS
 
-![Breast Cancer Cells](AI_NEWS_ARCHITECTURE.gif)
+![image](AI_NEWS_ARCHITECTURE.gif)
 
 ## Overview
+
+Check out video here: https://www.canva.com/design/DAF40s6MgaQ/OVM7Pb9DKsnXH_fQ6j0TOg/watch?utm_content=DAF40s6MgaQ&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 This web application provides users with a platform to view recent articles related to business. The system efficiently fetches and displays articles through a dedicated service that runs every hour. To ensure high availability, the server responds to requests using a cache mechanism. If the cache is empty, the system fetches articles directly from the database, updating the cache in the process.
 
